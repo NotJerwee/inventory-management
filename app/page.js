@@ -33,7 +33,9 @@ export default function Home() {
               color={"#333"}
               textAlign={"center"}
               fontWeight={"bold"}>
-              {i}
+              {
+                i.charAt(0).toUpperCase() + i.slice(1) 
+              }
             </Typography>
         </Box>
       ))}
