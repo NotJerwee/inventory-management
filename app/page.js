@@ -2,7 +2,7 @@
 
 import { Stack, Box, Typography, Modal, TextField, Button } from '@mui/material'
 import { useState, useEffect } from 'react'
-import { firestore, docs } from '@/firebase'
+import { firestore } from '@/firebase'
 
 const items = [
   "tomato",
