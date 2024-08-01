@@ -1,8 +1,8 @@
 "use client";
 
 import { Stack, Box, Typography, Modal, TextField, Button } from '@mui/material'
-import { useState, useEffect, handleClose, handleOpen, style } from 'react'
-import { firestore } from '@/firebase'
+import { useState, useEffect } from 'react'
+import { firestore, docs } from '@/firebase'
 
 const items = [
   "tomato",
