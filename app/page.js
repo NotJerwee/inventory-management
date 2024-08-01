@@ -12,6 +12,11 @@ const items = [
 ]
 
 export default function Home() {
+  
+  const [inventory, setInventory] = useState([])
+  const [open, setOpen] = useState(false)
+  const [itemName, setItemName] = useState('')
+
   return <Box
   width="100ww"
   height="100vh"
