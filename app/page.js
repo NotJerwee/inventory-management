@@ -56,10 +56,13 @@ export default function Home() {
     }
     await updateInventory()
   }
-  
+
   useEffect(() => {
     updateInventory()
   }, [])
+
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
   return (
   <Box
