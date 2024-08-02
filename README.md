@@ -1,3 +1,5 @@
+# pantry-tracker
+
 ## Getting Started
 
 First, run the development server:
@@ -6,4 +8,3 @@ First, run the development server:
 npm run dev
 ```
 
-# pantry-tracker
