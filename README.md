@@ -1,7 +1,6 @@
 # pantry-tracker
 
-## Getting Started
-
+## Installation
 First, run the development server:
 
 ```
