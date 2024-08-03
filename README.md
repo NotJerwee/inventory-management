@@ -11,6 +11,7 @@ https://github.com/yourusername/pantry-tracker.git
 cd pantry-tracker
 ```
 
+3. Install the necessary packages:
 
 First, run the development server:
 
