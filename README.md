@@ -6,6 +6,12 @@
 https://github.com/yourusername/pantry-tracker.git
 ```
 
+2. Change the project directory:
+```
+cd pantry-tracker
+```
+
+
 First, run the development server:
 
 ```
