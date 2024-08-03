@@ -12,6 +12,9 @@ cd pantry-tracker
 ```
 
 3. Install the necessary packages:
+```
+npm install
+```
 
 First, run the development server:
 
