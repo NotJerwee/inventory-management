@@ -1,5 +1,7 @@
 # pantry-tracker
 
+Pantry management application that allows users to keep track of pantry items by adding or removing items and updating their quantities.
+
 ## Installation
 1. Clone the respository:
 ```
