@@ -17,10 +17,11 @@ const items = [
 ]
 
 export default function Home() {
-  
   const [inventory, setInventory] = useState([])
+  const [filteredInventory, setFilteredInventory] = useState([])
   const [open, setOpen] = useState(false)
   const [itemName, setItemName] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
 
   const updateInventory = async () => {
     const snapshot = query(collection(firestore, 'inventory'))
@@ -30,6 +31,7 @@ export default function Home() {
       inventoryList.push({ name: doc.id, ...doc.data() })
     })
     setInventory(inventoryList)
+    setFilteredInventory(inventoryList)
   }
   
   const addItem = async (item) => {
@@ -61,6 +63,16 @@ export default function Home() {
   useEffect(() => {
     updateInventory()
   }, [])
+
+  useEffect(() => {
+    if (searchQuery === '') {
+      setFilteredInventory(inventory)
+    } else {
+      setFilteredInventory(inventory.filter(item => 
+        item.name.toLowerCase().includes(searchQuery.toLowerCase())
+      ))
+    }
+  }, [searchQuery, inventory])
 
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
@@ -119,7 +131,17 @@ export default function Home() {
           </Stack>
         </Box>
       </Modal>
-      <Button variant="contained" onClick={handleOpen}>
+      <TextField
+        id="search-bar"
+        label="Search"
+        variant="outlined"
+        fullWidth
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        margin="normal"
+        sx={{ mb: 2, width: '800px' }} // Adjust margin and width as needed
+      />
+      <Button variant="contained" onClick={handleOpen} sx={{ mb: 2 }}>
         Add New Item
       </Button>
       <Box border={'1px solid #333'}>
@@ -136,7 +158,7 @@ export default function Home() {
           </Typography>
         </Box>
         <Stack width="800px" height="300px" spacing={2} overflow={'auto'}>
-          {inventory.map(({name, quantity}) => (
+          {filteredInventory.map(({name, quantity}) => (
             <Box
               key={name}
               width="100%"
