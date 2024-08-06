@@ -23,5 +23,7 @@ npm install
 npm run dev
 ```
 
+## Setup firebase
+
 ## Tech Stack
 [![My Skills](https://skillicons.dev/icons?i=nextjs,react,nodejs,js,materialui,html,css,firebase)](https://skillicons.dev)
