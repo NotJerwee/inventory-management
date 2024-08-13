@@ -1,6 +1,6 @@
 # inventory-management
 
-Pantry management application that allows users to keep track of pantry items by adding or removing items and updating their quantities.
+Inventory management application that allows users to keep track of items by adding or removing items and updating their quantities.
 
 ## Installation
 1. Clone the respository:
