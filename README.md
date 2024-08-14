@@ -10,7 +10,7 @@ https://github.com/yourusername/inventory-management.git
 
 2. Change the project directory:
 ```
-cd pantry-tracker
+cd inventory-management
 ```
 
 3. Install the necessary packages:
