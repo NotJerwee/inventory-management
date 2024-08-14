@@ -5,7 +5,7 @@ Inventory management application that allows users to keep track of items by add
 ## Installation
 1. Clone the respository:
 ```
-https://github.com/yourusername/pantry-tracker.git
+https://github.com/yourusername/inventory-management.git
 ```
 
 2. Change the project directory:
