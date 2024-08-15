@@ -2,7 +2,7 @@
 
 import { Stack, Box, Typography, Modal, TextField, Button } from '@mui/material'
 import { useState, useEffect } from 'react'
-import { firestore } from '@/firebase'
+import { firestore } from '../firebase'
 import { query, collection, getDocs, doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore'
 
 const items = [
